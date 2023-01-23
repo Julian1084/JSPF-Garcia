@@ -1,19 +1,6 @@
-
-const productos = [
-    { id: 01, nombre: "Picada para 3", categoria: "PICADA", precio: 3000, stock: 1, img: "images/picada3.PNG" },
-    { id: 02, nombre: "Picada para 6", categoria: "PICADA", precio: 5000, stock: 10, img: "images/picada6.PNG" },
-    { id: 03, nombre: "Picada para 10", categoria: "PICADA", precio: 7000, stock: 10, img: "images/picada10.PNG" },
-    { id: 04, nombre: "Picada para 15", categoria: "PICADA", precio: 12000, stock: 10, img: "images/picada15.PNG" },
-    { id: 05, nombre: "Cerveza Lata Quilmes - Pack de 6", categoria: "cervezas", precio: 1374, stock: 10, img: "images/quilmes.PNG" },
-    { id: 06, nombre: "Cerveza Lata Antares - Pack de 6", categoria: "cervezas", precio: 2970, stock: 10, img: "images/antares.PNG" },
-    { id: 07, nombre: "Cerveza Lata Patagonia - Pack de 6", categoria: "cervezas", precio: 2742, stock: 10, img: "images/patagonia.PNG" },
-    { id: 08, nombre: "Cerveza Lata Andes - Pack de 6", categoria: "cervezas", precio: 1059, stock: 10, img: "images/andes.PNG" },
-    { id: 09, nombre: "Coca-Cola Lata - Pack de 6", categoria: "gaseosas", precio: 1400, stock: 10, img: "images/coca.PNG" },
-    { id: 10, nombre: "Aquarius Naranja botella 500cc - Pack de 6 ", categoria: "gaseosas", precio: 1229, stock: 10, img: "images/aquariusnaranja.JPG" },
-    { id: 11, nombre: "Aquarius Manzana botella 500cc - Pack de 6 ", categoria: "gaseosas", precio: 1229, stock: 10, img: "images/aquariusmanzana.PNG" },
-   
-]
-
+fetch("./productos.json")
+    .then(response => response.json())
+    .then(productos => {
 let carritoJSON = ""
 let totalFinal = ""
 let unidades = ""
@@ -29,6 +16,15 @@ let gaseosas = document.getElementById("gaseosas")
 let input = document.getElementById("input")
 let button = document.getElementById("buscador")
 
+function alertaPersonalizada(texto, icono, confirmacion, tiempo) {
+    Swal.fire({
+        text: texto,
+        icon: icono,
+        showConfirmButton: confirmacion,
+        timer: tiempo
+    })
+    
+}
 function renderizar(array) {
 
     contenedor.innerHTML = ""
@@ -56,6 +52,7 @@ function renderizar(array) {
     let agregarCarrito = document.getElementsByClassName('btn btn-outline-secondary add-btn update-cart')
     for (boton of agregarCarrito) {
         boton.addEventListener("click", addItem)
+        
     }
 }
 
@@ -80,6 +77,7 @@ function addItem(e) {
     unidades = carrito.reduce((a, b) => a + b.unidades, 0)
     renderizarCarro(carrito)
     totalRender(carrito)
+    alertaPersonalizada("Haz agregado un item al carrito", "success", false, 2000)
 }
 
 function renderizarCarro(array) {
@@ -237,4 +235,11 @@ function buscar(e) {
     let productoFiltrado = productos.filter(producto => producto.nombre.toLowerCase().includes(input.value.toLowerCase()) || producto.categoria.toLowerCase().includes(input.value.toLowerCase()))
     renderizar(productoFiltrado)
 }
+
+
+
+
+
+    })
+
 
