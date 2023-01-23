@@ -235,11 +235,3 @@ function buscar(e) {
     let productoFiltrado = productos.filter(producto => producto.nombre.toLowerCase().includes(input.value.toLowerCase()) || producto.categoria.toLowerCase().includes(input.value.toLowerCase()))
     renderizar(productoFiltrado)
 }
-
-
-
-
-
-    })
-
-
