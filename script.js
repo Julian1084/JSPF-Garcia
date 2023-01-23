@@ -31,13 +31,19 @@ function renderizar(array) {
 
         let tarjetaBody = document.createElement("div")
         tarjetaBody.className = "col-lg-4"
-        tarjetaBody.innerHTML = `
-        <div class="div-img" ><img class="thumbnail" src="${producto.img}"></div>
-        <div class="box-element product">
-            <h6><strong>${producto.nombre}</strong></h6>
-            <h6 class= "precio"><strong>Precio: $ ${producto.precio.toFixed(2)}</strong></h6><hr>
+        tarjetaBody.innerHTML =
+          `<div class="card estilo-c">
+          <a href="#">
+            <div class="img-container">
+              <img src="${producto.img}">
+              <span class="promo">15% de descuento</span>
+            </div>
+           </a>
+          <div class="info-container">
+            <h3>${producto.nombre}</h3>
+            <strong>$${producto.precio}</strong>
             <button id ="${producto.id}" class="btn btn-outline-secondary add-btn update-cart">Agregar al carrito</button>
-            <a class="btn btn-outline-success" href="#">Ver</a>
+          </div>
         </div>
         `
         contenedor.append(tarjetaBody)
