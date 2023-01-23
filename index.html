@@ -15,17 +15,32 @@
 
   <!--  navbar -->
 
+
   <nav class="navbar navbar-expand-lg navbar-dark bg-dark">
-    <img class="logo" src="./images/logo.jfif" alt="">
-    <a class="navbar-brand" href=""></a>
-         <div class="search">
+    <a class="nombre" href="">PICADAS - RUMBO AL MUNDIAL</a>
+    <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarSupportedContent"
+      aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation">
+      <span class="navbar-toggler-icon"></span>
+    </button>
+    <div class="collapse navbar-collapse" id="navbarSupportedContent">
+      <ul class="navbar-nav mr-auto">
+        <li class="nav-item dropdown">
+          <a class="nav-link dropdown-toggle " href="#" id="navbarDropdown" role="button" data-toggle="dropdown"
+            aria-haspopup="true" aria-expanded="false">Categorias</a>
+          <div class="dropdown-menu" aria-labelledby="navbarDropdown">
+            <a id="picada" class="dropdown-item" href="#">Picadas</a>
+            <a id="cervezas" class="dropdown-item" href="#">Cervezas</a>
+            <a id="gaseosas" class="dropdown-item" href="#">Gaseosas</a>
+          </div>
+        </li>
+      </ul>
+      <div class="search">
         <div class="d-flex" role="search">
-          <input id="input" class="form-control me-2" type="text" placeholder="Buscar" aria-label="Search">
+          <input id="input" class="form-control me-2" type="text" placeholder="Search" aria-label="Search">
           <button id="buscador" class="btn btn-dark">Search</button>
         </div>
       </div>
-      <div class="form-inline my-2 my-lg-0">
-        <a href="#" class="btn btn-warning">Login</a>
+      <div id="icono-carro" class="form-inline my-2 my-lg-0">
         <a id="cart-button">
           <img id="cart-icon" src="images/cart.png">
         </a>

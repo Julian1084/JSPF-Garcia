@@ -4,13 +4,13 @@ const productos = [
     { id: 02, nombre: "Picada para 6", categoria: "PICADA", precio: 5000, stock: 10, img: "images/picada6.PNG" },
     { id: 03, nombre: "Picada para 10", categoria: "PICADA", precio: 7000, stock: 10, img: "images/picada10.PNG" },
     { id: 04, nombre: "Picada para 15", categoria: "PICADA", precio: 12000, stock: 10, img: "images/picada15.PNG" },
-    { id: 05, nombre: "Cerveza Lata Quilmes - Pack de 6", categoria: "BEBIDAS CON ALCOHOL", precio: 1374, stock: 10, img: "images/quilmes.PNG" },
-    { id: 06, nombre: "Cerveza Lata Antares - Pack de 6", categoria: "BEBIDAS CON ALCOHOL", precio: 2970, stock: 10, img: "images/antares.PNG" },
-    { id: 07, nombre: "Cerveza Lata Patagonia - Pack de 6", categoria: "BEBIDAS CON ALCOHOL", precio: 2742, stock: 10, img: "images/patagonia.PNG" },
-    { id: 08, nombre: "Cerveza Lata Andes - Pack de 6", categoria: "BEBIDAS CON ALCOHOL", precio: 1059, stock: 10, img: "images/andes.PNG" },
-    { id: 09, nombre: "Coca-Cola Lata - Pack de 6", categoria: "BEBIDAS SIN ALCOHOL", precio: 1400, stock: 10, img: "images/coca.PNG" },
-    { id: 10, nombre: "Aquarius Naranja botella 500cc - Pack de 6 ", categoria: "BEBIDAS SIN ALCOHOL", precio: 1229, stock: 10, img: "images/aquariusnaranja.JPG" },
-    { id: 11, nombre: "Aquarius Manzana botella 500cc - Pack de 6 ", categoria: "BEBIDAS SI ALCOHOL", precio: 1229, stock: 10, img: "images/aquariusmanzana.PNG" },
+    { id: 05, nombre: "Cerveza Lata Quilmes - Pack de 6", categoria: "cervezas", precio: 1374, stock: 10, img: "images/quilmes.PNG" },
+    { id: 06, nombre: "Cerveza Lata Antares - Pack de 6", categoria: "cervezas", precio: 2970, stock: 10, img: "images/antares.PNG" },
+    { id: 07, nombre: "Cerveza Lata Patagonia - Pack de 6", categoria: "cervezas", precio: 2742, stock: 10, img: "images/patagonia.PNG" },
+    { id: 08, nombre: "Cerveza Lata Andes - Pack de 6", categoria: "cervezas", precio: 1059, stock: 10, img: "images/andes.PNG" },
+    { id: 09, nombre: "Coca-Cola Lata - Pack de 6", categoria: "gaseosas", precio: 1400, stock: 10, img: "images/coca.PNG" },
+    { id: 10, nombre: "Aquarius Naranja botella 500cc - Pack de 6 ", categoria: "gaseosas", precio: 1229, stock: 10, img: "images/aquariusnaranja.JPG" },
+    { id: 11, nombre: "Aquarius Manzana botella 500cc - Pack de 6 ", categoria: "gaseosas", precio: 1229, stock: 10, img: "images/aquariusmanzana.PNG" },
    
 ]
 
@@ -23,6 +23,11 @@ let carritoRender2 = document.getElementById("cart-row-2")
 let total = document.getElementById("total")
 let cartNav = document.getElementById("cart-nav")
 let botonCarrito = document.getElementById("cart-button")
+let picada = document.getElementById("picada")
+let cervezas = document.getElementById("cervezas")
+let gaseosas = document.getElementById("gaseosas")
+let input = document.getElementById("input")
+let button = document.getElementById("buscador")
 
 function renderizar(array) {
 
@@ -218,19 +223,14 @@ if (localStorage.getItem("Carrito")) {
     totalRenderVacio(carrito)
 }
 
-let picadas = document.getElementById("picada")
-let bebidasSinAlcohol = document.getElementById("bebidas sin alcohol")
-let bebidasConAlcohol = document.getElementById("bebidas con alcohol")
-picadas.addEventListener("click", filtroCategoria)
-bebidasConAlcohol.addEventListener("click", filtroCategoria)
-bebidasSinAlcohol.addEventListener("click", filtroCategoria)
+picada.addEventListener("click", filtroCategoria)
+cervezas.addEventListener("click", filtroCategoria)
+gaseosas.addEventListener("click", filtroCategoria)
 function filtroCategoria(e) {
     e.preventDefault()
     let categoriafiltrado = productos.filter(producto => producto.categoria.toLowerCase() == e.target.id)
     renderizar(categoriafiltrado)
 }
-let input = document.getElementById("input")
-let button = document.getElementById("buscador")
 button.addEventListener("click", buscar)
 function buscar(e) {
     e.preventDefault()

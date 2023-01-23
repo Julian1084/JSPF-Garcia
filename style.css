@@ -1,6 +1,16 @@
 *{
 	box-sizing: border-box;
   }
+  .nombre {
+	text-decoration: none;
+	color: white;
+	margin-right: 5px;
+	margin-left: 15px;
+	border: solid;
+	border-color: black;
+	padding: 10px;
+  }
+
   .contenedor{
 	width: 100%;
 	display: flex;
@@ -62,7 +72,7 @@
 	border: 1px solid black;
 	border-radius: 25px;
   }
-  .estilo-c .add-cart:hover{
+  .estilo-c .update-cart:hover{
 	color: black;
 	background-color: transparent;
 	border: 1px solid black;
