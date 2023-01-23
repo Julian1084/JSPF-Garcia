@@ -1,6 +1,6 @@
 fetch('./productos.json')
   .then(response => response.json())
-  .then(productos => {
+  .then(productos => console.log(productos))
 let carritoJSON = ""
 let totalFinal = ""
 let unidades = ""
