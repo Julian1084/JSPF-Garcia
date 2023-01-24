@@ -1,6 +1,7 @@
-fetch('./productos.json')
+let url = ('./productos.json')
+fetch(url)
   .then(response => response.json())
-  .then(productos => console.log(productos))
+  .then(productos => {
 let carritoJSON = ""
 let totalFinal = ""
 let unidades = ""
@@ -235,3 +236,4 @@ function buscar(e) {
     let productoFiltrado = productos.filter(producto => producto.nombre.toLowerCase().includes(input.value.toLowerCase()) || producto.categoria.toLowerCase().includes(input.value.toLowerCase()))
     renderizar(productoFiltrado)
 }
+})
