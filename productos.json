@@ -3,11 +3,11 @@
     { "id": 2, "nombre": "Picada para 6", "categoria": "PICADA", "precio": 5000, "stock": 10, "img": "./images/picada6.PNG" },
     { "id": 3, "nombre": "Picada para 10"," categoria": "PICADA", "precio": 7000, "stock": 10, "img": "./images/picada10.PNG" },
     { "id": 4, "nombre": "Picada para 15"," categoria": "PICADA", "precio": 12000, "stock": 10, "img": "./images/picada15.PNG" },
-    { "id": 5, "nombre": "Cerveza Lata Quilmes - Pack de 6", "categoria": "cervezas", "precio": 1374, "stock": 10, "img": "./images/quilmes.PNG" },
-    { "id": 6, "nombre": "Cerveza Lata Antares - Pack de 6", "categoria": "cervezas", "precio": 2970, "stock": 10, "img": "./images/antares.PNG" },
+    { "id": 5, "nombre": "Cerveza L. Quilmes - Pack de 6", "categoria": "cervezas", "precio": 1374, "stock": 10, "img": "./images/quilmes.PNG" },
+    { "id": 6, "nombre": "Cerveza L. Antares - Pack de 6", "categoria": "cervezas", "precio": 2970, "stock": 10, "img": "./images/antares.PNG" },
     { "id": 7, "nombre": "Cerveza L.  Patagonia - Pack de 6","categoria": "cervezas", "precio": 2742, "stock": 10, "img": "./images/patagonia.PNG" },
-    { "id": 8, "nombre": "Cerveza Lata Andes - Pack de 6", "categoria": "cervezas", "precio": 1059, "stock": 10, "img": "./images/andes.PNG" },
-    { "id": 9, "nombre": "Coca-Cola Lata - Pack de 6", "categoria": "gaseosas", "precio": 1400, "stock": 10, "img": "./images/coca.PNG" },
-    { "id": 10, "nombre": "Aquarius Naranja botella 500cc - Pack de 6 ", "categoria": "gaseosas", "precio": 1229, "stock": 10, "img": "./images/aquariusnaranja.JPG" },
-    { "id": 11, "nombre": "Aquarius Manzana botella 500cc - Pack de 6 ", "categoria": "gaseosas", "precio": 1229, "stock": 10, "img": "./images/aquariusmanzana.PNG" }
+    { "id": 8, "nombre": "Cerveza L. Andes - Pack de 6", "categoria": "cervezas", "precio": 1059, "stock": 10, "img": "./images/andes.PNG" },
+    { "id": 9, "nombre": "Coca-Cola L. - Pack de 6", "categoria": "gaseosas", "precio": 1400, "stock": 10, "img": "./images/coca.PNG" },
+    { "id": 10, "nombre": "Aquarius Naranja B. 500cc - Pack de 6 ", "categoria": "gaseosas", "precio": 1229, "stock": 10, "img": "./images/aquariusnaranja.JPG" },
+    { "id": 11, "nombre": "Aquarius Manzana B. 500cc - Pack de 6 ", "categoria": "gaseosas", "precio": 1229, "stock": 10, "img": "./images/aquariusmanzana.PNG" }
 ]
