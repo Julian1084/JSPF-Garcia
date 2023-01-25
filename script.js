@@ -42,7 +42,7 @@ function renderizar(array) {
             </div>
            </a>
           <div class="info-container">
-            <h3>${producto.nombre}</h3>
+            <h4>${producto.nombre}</h4>
             <strong>$${producto.precio}</strong>
             <button id ="${producto.id}" class="btn btn-outline-secondary add-btn update-cart">Agregar al carrito</button>
           </div>
